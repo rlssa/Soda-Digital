@@ -1,0 +1,136 @@
+/// <reference path="../../index.scss" />
+///////////////////////////////////////////////////////////////////////////////////
+///
+
+.buy-rent {
+  position: relative;
+
+  .wave-spacer {
+    z-index: -1;
+  }
+}
+.buy-rent-container {
+  position: relative;
+  z-index: 1;
+  padding: 40px 0;
+
+  @include media-breakpoint-up(md) {
+    max-width: 785px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .title {
+    font-size: 26px;
+    text-align: center;
+
+    color: $white;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 30px;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 40px;
+    }
+  }
+
+  .validation-form {
+
+    @include media-breakpoint-up(sm) {
+      margin: 0 84px !important;
+      padding: 42px 44px !important;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin: 0 116px !important;
+      padding: 42px 44px !important;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin: 0 116px !important;
+      padding: 42px 44px !important;
+    }
+  }
+
+  .renting-form {
+    box-shadow: 0px 14px 36px -18px rgba(0, 0, 0, 0.1), 0px 17px 60px -12px rgba(50, 50, 93, 0.1);
+    border-radius: 10px;
+    background-color: $white;
+    margin: 0 8px;
+    padding: 42px 25px;
+
+    @include media-breakpoint-up(sm) {
+      margin: 0 20px;
+      padding: 42px 44px;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin: 0 50px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin: 0 116px;
+    }
+
+    p {
+      a {
+        color: $theme-primary;
+        text-decoration-line: underline;
+        font-weight: $font-weight-bold;
+      &:hover {
+        color: $theme-primary;
+      }
+      }
+    }
+
+    .options {
+      .label {
+        color: $theme-primary;
+        font-size: $font-size-md;
+        font-weight: $font-weight-bold;
+      } 
+    }
+
+    .form-check {
+      margin-bottom: 0.5rem;
+      .form-check-label {
+        margin-left: 4px;
+        font-size: $font-size-sm;
+      }
+    }
+
+    .form-check-input[type="checkbox"] {
+      border-radius: 0 !important;
+    }
+
+    .form-control {
+      border: 1px solid #d0d5dd !important;
+      border-radius: 5px !important;
+      font-size: $font-size-base;
+      padding: 0.56rem 0.75rem !important;
+
+      &::placeholder {
+        color: $gray-600;
+      }
+
+      &.is-invalid {
+        border-color: $danger !important;
+      }
+    }
+
+    .form-select {
+      border: 1px solid #d0d5dd !important;
+      border-radius: 5px !important;
+      font-size: $font-size-base;
+      padding: 0.56rem 0.75rem !important;
+    }
+
+    .contact-details-text {
+      font-size: $font-size-md;
+      color: $theme-primary;
+      font-weight: $font-weight-bold;
+      padding: 34px 0;
+      margin-bottom: 0;
+    }
+  }
+}

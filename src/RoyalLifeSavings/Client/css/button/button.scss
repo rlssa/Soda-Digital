@@ -1,0 +1,166 @@
+/// <reference path="../index.scss" />
+///////////////////////////////////////////////////////////////////////////////////
+
+.btn {
+  border-radius: 25px;
+  color: $white;
+  background-color: transparent;
+  font-family: $font-family-vag-rounded;
+  font-weight: 700;
+
+  &:disabled {
+    background: $theme-tertiary-gray;
+    color: white;
+    border: 0;
+    cursor: not-allowed !important;
+  }
+}
+
+.btn-login {
+  background-color: $theme-primary;
+  transition: all 0.2s ease-in-out;
+  border: 0;
+
+  &:hover {
+    background-color: $white !important;
+    color: $theme-primary !important;
+  }
+
+  &:active {
+    background-color: $white !important;
+    color: $theme-primary !important;
+  }
+
+  &:focus-visible {
+    background-color: $theme-primary !important;
+    color: $white !important;
+  }
+}
+.btn-submit {
+  background-color: $theme-primary;
+  transition: all 0.2s ease-in-out;
+  border: solid 1px $theme-primary;
+
+  &:hover {
+    background-color: $white !important;
+    color: $theme-primary !important;
+  }
+
+  &:active {
+    background-color: $white !important;
+    color: $theme-primary !important;
+  }
+
+  &:focus-visible {
+    background-color: $theme-primary !important;
+    color: $white !important;
+  }
+}
+
+.btn-view {
+  background-color: $theme-primary;
+  transition: all 0.2s ease-in-out;
+  border: 0;
+  font-weight: 400;
+  padding: 9px 22px;
+  border: solid 1px $theme-primary;
+
+  &:hover {
+    background-color: $white !important;
+    color: $theme-primary !important;
+    border-color: $theme-primary !important;
+  }
+
+  &:active {
+    background-color: $white !important;
+    color: $theme-primary !important;
+  }
+
+  &:focus-visible {
+    background-color: $theme-primary !important;
+    color: $white !important;
+  }
+}
+
+.btn-more {
+  border: solid 2px #85d6f6;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: $theme-primary !important;
+    border-color: $theme-primary !important;
+    color: $white !important;
+  }
+}
+
+.btn-more2 {
+  border: solid 2px #85d6f6;
+  transition: all 0.3s ease-in-out;
+  color: $theme-primary;
+  display: block;
+
+  &:hover {
+    border: solid 2px #29a3da !important;
+    color: $theme-primary !important;
+    text-decoration: none !important;
+  }
+}
+
+.btn-buy {
+  background-image: linear-gradient(121.81deg, #f9c128 3.95%, #f19412 33.05%);
+  transition: all 0.3s ease-in-out;
+  background-size: 200% auto;
+  color: white;
+  display: block;
+  border: 0;
+
+  &:hover {
+    background-position: right center !important; /* change the direction of the change here */
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+}
+
+.btn-submit {
+  background-color: $theme-primary;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #027dc5 !important;
+    color: $white !important;
+  }
+}
+
+
+.btn-icon {
+  display: flex;
+}
+
+.btn-icon-only {
+  padding: 0.4rem 0.7rem !important;
+
+  @include media-breakpoint-up(md) {
+    padding: 0.65rem 1.5rem !important;
+  }
+}
+
+.btn-text {
+  font-family: $font-family-vag-rounded;
+  color: $theme-primary;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-base;
+  stroke: $theme-primary-light;
+
+  &:hover {
+    color: $theme-primary;
+  }
+
+  .icon-text {
+    color: $theme-primary-light;
+  }
+
+  .text {
+    color: $theme-primary;
+    text-decoration-line: underline;
+    text-underline-offset: 6px;
+  }
+}

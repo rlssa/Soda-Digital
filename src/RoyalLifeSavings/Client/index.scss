@@ -1,0 +1,150 @@
+﻿//===  SODA DIGITAL
+
+///////////////////////////////////////////////////////////////////////////////////
+//===  BOOTSTRAP FUNCTIONS
+//===  Add reference and import Bootstrap Functions
+///////////////////////////////////////////////////////////////////////////////////
+
+/// <reference path="~bootstrap/scss/functions.scss";
+@import "~bootstrap/scss/functions";
+
+///////////////////////////////////////////////////////////////////////////////////
+//===  BOOTSTRAP VARIABLES
+///////////////////////////////////////////////////////////////////////////////////
+
+@import "./css/theme";
+
+///////////////////////////////////////////////////////////////////////////////////
+//===  CUSTOMISE BOOTSTRAP VARIABLES
+//===  ---------------------------------------------------------------------------
+//===  1. Copy the entire Bootstrap variables file to a new [projectprefix]-variables.scss file
+//===  2. Remove !default flag from any properties you change
+///////////////////////////////////////////////////////////////////////////////////
+
+// This file has the default bootstrap variables from the npm package
+
+// The current ./css/variables.scss looks like it's from bootstrap 4.x
+
+// if you replace the contents of ./css/variables.scss with ~bootstrap/scss/variables
+// then customise it from there should work correctly.
+
+@import "./css/variables";
+// @import "./css/variables.scss";
+
+
+///////////////////////////////////////////////////////////////////////////////////
+//===  INCLUDE EACH BOOTSTRAP COMPONENT
+//===  ---------------------------------------------------------------------------
+//===  For each Bootstrap module:
+//===  1. Reference module (prefixed with /// )
+//===  2. Import module
+//===  E.g.:
+//===  /// <reference path="~bootstrap/scss/mixins.scss";
+//===  @import "~bootstrap/scss/mixins";
+//===  Repeat for each Bootstrap Component
+///////////////////////////////////////////////////////////////////////////////////
+
+/// <reference path="~bootstrap/scss/mixins.scss" />
+@import "~bootstrap/scss/mixins";
+/// <reference path="~bootstrap/scss/utilities.scss" />
+@import "~bootstrap/scss/utilities";
+
+/// <reference path="~bootstrap/scss/root.scss" />
+@import "~bootstrap/scss/root";
+/// <reference path="~bootstrap/scss/reboot.scss" />
+@import "~bootstrap/scss/reboot";
+/// <reference path="~bootstrap/scss/type.scss" />
+@import "~bootstrap/scss/type";
+/// <reference path="~bootstrap/scss/images.scss" />
+@import "~bootstrap/scss/images";
+/// <reference path="~bootstrap/scss/containers.scss" />
+@import "~bootstrap/scss/containers";
+/// <reference path="~bootstrap/scss/grid.scss" />
+@import "~bootstrap/scss/grid";
+/// <reference path="~bootstrap/scss/tables.scss" />
+@import "~bootstrap/scss/tables";
+/// <reference path="~bootstrap/scss/forms.scss" />
+@import "~bootstrap/scss/forms";
+/// <reference path="~bootstrap/scss/buttons.scss" />
+@import "~bootstrap/scss/buttons";
+/// <reference path="~bootstrap/scss/transitions.scss" />
+@import "~bootstrap/scss/transitions";
+/// <reference path="~bootstrap/scss/dropdown.scss" />
+@import "~bootstrap/scss/dropdown";
+/// <reference path="~bootstrap/scss/button-group.scss" />
+@import "~bootstrap/scss/button-group";
+/// <reference path="~bootstrap/scss/nav.scss" />
+@import "~bootstrap/scss/nav";
+/// <reference path="~bootstrap/scss/navbar.scss" />
+@import "~bootstrap/scss/navbar";
+/// <reference path="~bootstrap/scss/card.scss" />
+@import "~bootstrap/scss/card";
+/// <reference path="~bootstrap/scss/accordion.scss" />
+@import "~bootstrap/scss/accordion";
+/// <reference path="~bootstrap/scss/breadcrumb.scss" />
+@import "~bootstrap/scss/breadcrumb";
+/// <reference path="~bootstrap/scss/pagination.scss" />
+@import "~bootstrap/scss/pagination";
+/// <reference path="~bootstrap/scss/badge.scss" />
+@import "~bootstrap/scss/badge";
+/// <reference path="~bootstrap/scss/alert.scss" />
+@import "~bootstrap/scss/alert";
+/// <reference path="~bootstrap/scss/progress.scss" />
+@import "~bootstrap/scss/progress";
+/// <reference path="~bootstrap/scss/list-group.scss" />
+@import "~bootstrap/scss/list-group";
+/// <reference path="~bootstrap/scss/close.scss" />
+@import "~bootstrap/scss/close";
+/// <reference path="~bootstrap/scss/toasts.scss" />
+@import "~bootstrap/scss/toasts";
+/// <reference path="~bootstrap/scss/modal.scss" />
+@import "~bootstrap/scss/modal";
+/// <reference path="~bootstrap/scss/tooltip.scss" />
+@import "~bootstrap/scss/tooltip";
+/// <reference path="~bootstrap/scss/popover.scss" />
+@import "~bootstrap/scss/popover";
+/// <reference path="~bootstrap/scss/carousel.scss" />
+@import "~bootstrap/scss/carousel";
+/// <reference path="~bootstrap/scss/spinners.scss" />
+@import "~bootstrap/scss/spinners";
+/// <reference path="~bootstrap/scss/offcanvas.scss" />
+@import "~bootstrap/scss/offcanvas";
+/// <reference path="~bootstrap/scss/placeholders.scss" />
+@import "~bootstrap/scss/placeholders";
+
+// Helpers
+/// <reference path="~bootstrap/scss/helpers.scss" />
+@import "~bootstrap/scss/helpers";
+
+// Utilities
+/// <reference path="~bootstrap/scss/utilities/api.scss" />
+@import "~bootstrap/scss/utilities/api";
+
+///////////////////////////////////////////////////////////////////////////////////
+//===  Custom PP variables
+///////////////////////////////////////////////////////////////////////////////////
+@import "./css/custom-variables";
+
+
+///////////////////////////////////////////////////////////////////////////////////
+//===  Custom CSS and Non-Bootstrap Custom Components
+///////////////////////////////////////////////////////////////////////////////////
+
+@import "./css/accordion/accordion";
+@import "./css/button/button";
+@import "./css/buy-rent/buy-rent";
+@import "./css/cards/cards";
+@import "./css/common/common";
+@import "./css/form/form";
+@import "./css/font/frutiger";
+@import "./css/font/vag-rounded";
+@import "./css/footer/footer";
+@import "./css/hero/hero";
+@import "./css/icon/icon";
+@import "./css/login/login";
+@import "./css/mixins/mixins";
+@import "./css/nav/nav";
+@import "./css/space-separator/space-separator";
+@import "./css/table/table";
+@import "./css/typography/typography";
+@import "./css/utilities/utilities";

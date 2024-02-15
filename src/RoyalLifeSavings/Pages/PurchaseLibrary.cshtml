@@ -1,0 +1,70 @@
+﻿@page
+@model PurchaseLibraryModel
+@{
+    ViewData["Title"] = "Purchase Library";
+    Layout = "_LayoutReverse";
+}
+
+<div class="space-separator--lg"></div>
+<div class="space-separator--lg"></div>
+<div class="space-separator--md"></div>
+<div class="space-separator--md"></div>
+
+<div class="page-container-sm">
+    <h1 class="text-primary text-center">List of Purchases</h1>
+    <h6 class="hero-subtitle-2 text-center">Please see below list confirming your purchase(s).</h6>
+    <div class="space-separator--lg"></div>
+    <div class="purchase-table-container">
+        <table class="table purchase-table">
+            <thead>
+                <tr>
+                    <th scope="col"><div class="head-title"></div></th>
+                    <th scope="col"><div class="head-title">Book Title</div></th>
+                    <th scope="col"><div class="head-title">Edition -Year</div></th>
+                    <th scope="col"><div class="head-title">Quantity</div></th>
+                    <th scope="col"><div class="head-title"></div></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model.Ebooks)
+                {
+                    <form method="post">
+                        <input type="hidden" asp-for="BookId" value="@book.VitalSourceId" />
+                        <tr>
+                            <td scope="row"> 
+                                <div class="td-body product-thumbnail">
+                                    <img class="image" src="/images/life-guarding-book.png" alt="">
+                                    <button class="btn btn-view mt-3 d-lg-none">View or Download</button>
+                                </div>
+                            </td>
+                            <td><div class="td-body"> <p class="book-title">@book.Name</p></div></td>
+                            <td> <div class="td-body">6th Edition - 2022</div></td>
+                            <td> <div class="td-body"><p class="qty">@book.Quantity</p></div></td>
+                            <td> <div class="td-body"><button class="btn btn-view mt-1">View or Download</button></div></td>
+                        </tr>
+                    </form>
+                }
+                @* <tr>
+                <td scope="row"> 
+                    <div class="td-body product-thumbnail">
+                        <img class="image" src="/images/swim-life-book.png" alt="">
+                        <button class="btn btn-view mt-3 d-lg-none">View or Download</button>
+                    </div>
+                </td>
+                <td><div class="td-body"> <p class="book-title">Swimming and Lifesaving</p></div></td>
+                <td> <div class="td-body">1st Edition - 2022</div></td>
+                <td> <div class="td-body"><p class="qty">1</p></div></td>
+                <td> <div class="td-body"><button class="btn btn-view mt-1">View or Download</button></div></td>
+                </tr>
+                <tr>
+                <td scope="row"> <div class="td-body product-thumbnail"><img class="image" src="/images/life-guarding-book.png" alt=""><button class="btn btn-view mt-3 d-lg-none">View or Download</button></div></td>
+                <td><div class="td-body"> <p class="book-title">Lifeguarding</p></div></td>
+                <td> <div class="td-body">6th Edition - 2022</div></td>
+                <td> <div class="td-body"><p class="qty">1</p></div></td>
+                <td> <div class="td-body"><button class="btn btn-view mt-1">View or Download</button></div></td>
+                </tr> *@
+               
+            </tbody>
+        </table>
+    </div>
+</div>

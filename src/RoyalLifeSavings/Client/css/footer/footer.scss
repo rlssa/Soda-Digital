@@ -1,0 +1,91 @@
+/// <reference path="../../index.scss" />
+///////////////////////////////////////////////////////////////////////////////////
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .links {
+        color: $theme-tertiary-gray;
+        padding: 7px 0;
+        transition: all .2s ease-in-out;
+        font-size: 14px;
+
+        &:hover {
+            color: $theme-primary;
+        }
+
+
+        @include media-breakpoint-up(md) {
+            font-size: 16px;
+            padding: 0 22px;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+footer {
+  margin-top: auto !important;
+  width: 100%;
+}
+
+.footer {
+  color: $theme-primary;
+
+  border-top: solid 1px $theme-primary-light;
+
+  padding: 2rem 0;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.all-rights {
+    margin-bottom: 0;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+      text-align: initial;
+    }
+}
+
+.socials {
+  display: flex;
+  padding-top: 1rem;
+  justify-content: center;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 0;
+  }
+  .social {
+    background: $theme-primary;
+    border-radius: 50%;
+    padding: 0.4rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background: #027DC5;
+    }
+    .icon-social {
+      color: $white;
+  
+    }
+  }
+}
+
+.footer-icon {
+  width: 315px;
+}

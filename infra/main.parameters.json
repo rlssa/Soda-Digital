@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "name": {
+      "value": "${AZURE_ENV_NAME}"
+    },
+    "projectName": {
+      "value": "rlssaebook"
+    },
+    "logAnalyticsWorkspaceResourceId": {
+      "value": "/subscriptions/b2b6623f-520f-400f-9d2c-2d120154629a/resourceGroups/rg-rlssa-ebook-common/providers/Microsoft.OperationalInsights/workspaces/log-rlssaebook"
+    },
+    "azureContributorGroupId": {
+      "value": "c514b369-443b-4ec4-8104-5a1253fc2234"
+    },
+    "azureContributorGroupName": {
+      "value": "Royal Life Saving Australia (Azure Contributor)"
+    },
+    "commonResourceGroupName" : {
+      "value": "rg-rlssa-ebook-common"
+    },
+    "dockerImage" : {
+      "value": "crrlssaebook.azurecr.io/ebook:latest"
+    },
+    "sqlServerAdminUser" : {
+      "value": "sqlserver-admin"
+    }
+  }
+}

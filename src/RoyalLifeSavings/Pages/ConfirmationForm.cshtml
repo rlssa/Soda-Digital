@@ -1,0 +1,31 @@
+@page "/confirmation-form"
+@model ConfirmationModel
+@{
+    ViewData["Title"] = "Thank you";
+    Layout = "_Layout";
+}
+<div class="buy-rent">
+    <div class="space-separator--lg"></div>
+    <div class="space-separator--lg"></div>
+    <div class="space-separator--md"></div>
+
+    <div class="page-container">
+        <div class="buy-rent-container"> 
+            <div class="space-separator"></div>
+            <h1 class="title mb-4">Buying or Renting Multiple Copies</h1>
+            <div class="renting-form validation-form">
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="icon icon-128">
+                        <icon icon="Confirm"></icon>
+                    </div>
+                </div>
+                <div class="space-separator"></div>
+                <h3 class="text-primary text-center">Thank you for completing this form.</h3>
+                <h6 class="hero-subtitle-2 text-center lh-base">We aim to respond to you by email within 2 business days.</h6>
+            </div>
+        </div>
+    </div>
+    <div class="wave-spacer">
+        <img class="buy-rent" src="/images/bg-buyrent.png" alt="">
+    </div>
+</div>

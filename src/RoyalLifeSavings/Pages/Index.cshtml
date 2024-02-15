@@ -1,0 +1,181 @@
+﻿@page
+@model RoyalLifeSavings.Pages.IndexModel
+@{
+    ViewData["Title"] = "Royal Life Saving eBook Store";
+    Layout = "_Layout";
+}
+
+<div class="hero">
+    <div class="space-separator--lg"></div>
+    <div class="space-separator--lg"></div>
+    <div class="space-separator--md"></div>
+    <div class="space-separator"></div>
+    <div class="page-container-sm">
+        <div class="hero-container">
+            <h1 class="text-white">Welcome to the Royal Life Saving eBook Store</h1>
+            <h5 class="hero-subtitle pr-5">Our eBooks provide expert information in an engaging, interactive, easy-to-access format and are a vital educational, training and reference tool.</h5>
+            <div class="books-overflow pt-4 d-none d-sm-block">
+                <div class="books" id="books">
+                    <div class="books-container row">
+                        <div class="books-card col-6 col-lg-4 col-xl-3">
+                            <a href="/lifeguarding">
+                                <img class="w-full" src="/images/life-guarding-book.png" alt="">
+                            </a>
+                            <h5 class="title">
+                                Lifeguarding
+                            </h5>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <p class="desc">6th Edition</p>
+                                <p class="desc desc-year">2022</p>
+                            </div>
+                            <p class="price">$31.00 <span class="currency"> AUD</span></p>
+                            <div class="d-flex flex-column align-items-center justify-content-center pt-2">
+                                 <a href="/lifeguarding" class="btn btn-buy mt-1">
+                                    View eBook
+                                </a>
+                            </div>
+                        </div>
+                        <div class="books-card col-6 col-lg-4 col-xl-3 pe-none">
+                            <a href="#">
+                                <img class="w-full" src="/images/swim-life-book.jpg" alt="">
+                            </a>
+                            <h5 class="title">
+                                Swimming and Lifesaving
+                            </h5>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <p class="desc">6th Edition</p>
+                                <p class="desc desc-year">2016</p>
+                            </div>
+                            <p class="price">$35.00 <span class="currency"> AUD</span></p>
+                            <div class="d-flex flex-column align-items-center justify-content-center pt-2">
+                                <button href="#" class="btn mt-1" disabled>
+                                    Coming Soon
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="embla__dots" id="embla__dots"></div>
+                </div>
+            </div>
+
+             <div class="books-overflow pt-4 d-sm-none">
+                <div class="books-mobile" id="books">
+                    <div class="books-container-mobile row">
+                        <div class="books-card col-6 col-lg-4 col-xl-3">
+                            <a href="/lifeguarding">
+                                <img class="w-full" src="/images/life-guarding-book.png" alt="">
+                            </a>
+                            <h5 class="title">
+                                Lifeguarding
+                            </h5>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <p class="desc">6th Edition</p>
+                                <p class="desc desc-year">2022</p>
+                            </div>
+                            <p class="price">$31.00 <span class="currency"> AUD</span></p>
+                            <div class="d-flex flex-column align-items-center justify-content-center pt-2">
+                                 <a href="/lifeguarding" class="btn btn-buy mt-1">
+                                    View eBook
+                                </a>
+                            </div>
+                        </div>
+                        <div class="books-card col-6 col-lg-4 col-xl-3 pe-none">
+                            <a href="#">
+                                <img class="w-full" src="/images/swim-life-book.png" alt="">
+                            </a>
+                            <h5 class="title">
+                                Swimming and Lifesaving
+                            </h5>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <p class="desc">1st Edition</p>
+                                <p class="desc desc-year">2022</p>
+                            </div>
+                            <p class="price">$35.00 <span class="currency"> AUD</span></p>
+                            <div class="d-flex flex-column align-items-center justify-content-center pt-2">
+                                <button class="btn mt-1" disabled>
+                                    Coming Soon
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="wave-spacer">
+        <img src="/images/hero-bg-new.png" alt="">
+    </div>
+</div>
+
+<div class="page-container-sm">
+    <div class="space-separator--md"></div>
+    <partial name="_EbookFeatures" />
+</div>
+
+ <div class="about bg-primary-pastel negative-margin-top">
+    <div class="page-container-sm">
+        <div class="space-separator--lg"></div>
+        <div class="space-separator--lg"></div>
+        <div class="row">
+            <div class="col-12 col-lg-6 pe-xl pt-md-5">
+                <h2 class="text-muted pt-2">About the Author</h2>
+                <div class="pe-lg">
+                    <p class="text-muted pt-3 leading-1 mb-1 lh-base">Royal Life Saving Society – Australia works to prevent drowning and facilitate healthy, active lifestyles by equipping all Australians with water safety skills.</p>
+                    <p class="text-muted pt-3 fw-bold leading-1 mb-1 lh-base">
+                    Our Vision has remained the same for over 125 years.
+                    </p>
+                    <p class="text-muted pt-3 leading-1 mb-1 lh-base">
+                        We are driven by:
+                    </p>
+                    <ul class="text-muted leading-1 about-author-list">
+                        <li class="lh-base">
+                            <div class="icon icon-me-2 icon-sm pt-1"><icon icon="Check"></icon></div>Innovative, reliable, evidence-based health promotion and advocacy
+                        </li>
+                        <li class="pt-2 lh-base">
+                            <div class="icon icon-me-2 icon-sm pt-1"><icon icon="Check"></icon></div>Strong and effective partnerships
+                        </li>
+                        <li class="pt-2 lh-base">
+                            <div class="icon icon-me-2 icon-sm pt-1"><icon icon="Check"></icon></div>Quality programs, products and services
+                        </li>
+                    </ul>
+                </div>
+                <p class="text-muted pt-3 leading-1 mb-1 lh-base">
+                    All of these qualities are reflected in the Manuals and Publications you can find on this site.
+                </p>
+                <p class="text-muted pt-3 leading-1 mb-1 lh-base">
+                    We work closely with our State and Territory Member Organisations, industry stakeholders, volunteers, members, trainers, employees and lifesavers to create evidence-based, technically accurate, engaging and easy to read publications that support quality education and training.
+                </p>
+                <p class="text-muted pt-3 leading-1 lh-base">
+                    We are thankful to the Australian Government and the diverse range of people, communities and stakeholders that support and elevate our work.
+                </p>
+            </div>
+             <div class="col-12 col-lg-6 pt-5 pt-lg-0 pb-5 pb-lg-0">
+                <div class="position-relative">
+                    <div class="about-image-1">
+                        <img class="w-full" src="/images/about1.jpg" alt="">
+                    </div>
+                    <div class="about-image-3-mobile">
+                        <img class="w-full" src="/images/about3.png" alt="">
+                    </div>
+                    <div class="about-image-2">
+                        <img class="w-full" src="/images/about2.png" alt="">
+                    </div>
+                    <div class="about-image-3">
+                        <img class="w-full" src="/images/about3.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="space-separator--lg"></div>
+    </div>
+</div>
+
+  <div class="bg-primary-dark position-relative artwork">
+    
+    <div class="page-container-sm">
+        <div class="artwork-container">
+            <p class="text">In the spirit of reconciliation, Royal Life Saving Society Australia acknowledges the Traditional Owners of Country throughout Australia and recognises their continuing connection to land, waters and communities. We pay our respect to Aboriginal and Torres Strait Islander cultures; Elders past and present.</p>
+        </div>
+    </div>
+ </div>

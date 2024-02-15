@@ -1,0 +1,126 @@
+/// <reference path="../../index.scss" />
+///////////////////////////////////////////////////////////////////////////////////
+.heading-1, h1, .h1 {
+  @include font-size($h1-font-size);
+}
+
+.heading-2, h2, .h2 {
+  @include font-size($h2-font-size);
+}
+
+.heading-3, h3, .h3 {
+  @include font-size($h3-font-size);
+}
+
+.heading-4, h4, .h4 {
+  @include font-size($h4-font-size);
+}
+
+.heading-5, h5, .h5 {
+  font-size: $h5-font-size;
+
+  @include media-breakpoint-down(xl) {
+    font-size: $h5-font-size;
+  }
+}
+
+.heading-6, h6, .h6 {
+  @include font-size($h6-font-size);
+}
+
+.font-weight-medium {
+  font-weight: $font-weight-medium;
+}
+
+.font-weight-medium {
+  font-weight: $font-weight-medium;
+}
+
+.font-weight-bold {
+  font-weight: $font-weight-bold;
+}
+
+.small {
+  font-size: $font-size-sm;
+}
+
+.xsmall {
+  font-size: $font-size-xs;
+}
+
+.medium {
+  font-size: $font-size-md;
+  line-height: $line-height-lg;
+}
+
+.large {
+  font-size: $font-size-lg;
+}
+
+.extra-large {
+  font-size: $h5-font-size;
+}
+
+.text-md-small {
+  @include media-breakpoint-up(md) {
+      font-size: $font-size-sm;
+  }
+}
+.text-normal {
+  font-size: $font-size-base;
+}
+.text-md-normal {
+  @include media-breakpoint-up(md) {
+      font-size: $font-size-base;
+  }
+}
+
+.text-md-medium {
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-md;
+    line-height: $line-height-lg;
+  }
+}
+
+.text-mobile-small {
+  @include media-breakpoint-up(sm) {
+      font-size: $font-size-sm;
+  }
+}
+
+.text-mobile-normal {
+  @include media-breakpoint-up(sm) {
+      font-size: $font-size-base;
+  }
+}
+
+.text-mobile-medium {
+  @include media-breakpoint-up(sm) {
+      font-size: $font-size-md;
+  }
+}
+
+.letter-spacing-2 {
+  letter-spacing: 2px;
+}
+
+.landing-heading {
+  font-size: $h4-font-size;
+
+  @include media-breakpoint-up(md) {
+      font-size: $h3-font-size;
+      line-height: 1.1;
+  }
+
+  @include media-breakpoint-up(lg) {
+      font-size: $h2-font-size;
+  }
+}
+
+.font-vag {
+  font-family: $font-family-vag-rounded;
+}
+
+.text-label {
+  color: #15B4BC;
+}

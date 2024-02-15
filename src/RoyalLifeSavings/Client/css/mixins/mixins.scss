@@ -1,0 +1,125 @@
+/// <reference path="../../index.scss" />
+///////////////////////////////////////////////////////////////////////////////////
+
+// transition
+@mixin transition($transition-property: all, $time: 0.2s, $delay: 0) {
+  transition-property: #{$transition-property};
+  transition-timing-function: ease-in-out;
+  transition-duration: $time;
+  transition-delay: $delay;
+}
+
+@mixin no-transition() {
+  transition: none;
+}
+
+// padding
+@mixin padding-x($padding) {
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+@mixin padding-y($padding) {
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+
+// margin
+@mixin margin-x($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+@mixin margin-y($margin) {
+  margin-top: $margin;
+  margin-bottom: $margin;
+}
+
+// devices
+/* smartphones, touchscreens */
+@mixin touch-devices-only() {
+  @media (hover: none) and (pointer: coarse) {
+      @content;
+  }
+}
+
+/* devices with pointer */
+@mixin pointer-devices-only() {
+  @media (hover: hover) {
+      @content;
+  }
+}
+
+@mixin no-scrolling() {
+  overflow: hidden;
+  position: relative;
+  touch-action: none;
+  -ms-touch-action: none;
+}
+
+@mixin scrolling() {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin scrolling-x() {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin scrolling-y() {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+// headings
+
+@mixin heading-base() {
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
+// color
+@function encodecolor($string) {
+  @if type-of($string) == 'color' {
+      $hex: str-slice(ie-hex-str($string), 4);
+      $string: unquote("#{$hex}");
+  }
+
+  $string: '%23' + $string;
+  @return $string;
+}
+
+//
+@mixin show-overlay() {
+  .global-overlay {
+      visibility: visible;
+      opacity: $modal-backdrop-opacity;
+  }
+}
+
+@mixin applyRadioButtonSize($size, $font-size) {
+  .custom-control-label {
+      font-size: $font-size;
+      // Background-color and (when enabled) gradient
+      &::before {
+          position: absolute;
+          top: ($font-size * $line-height-base - $size) / 2;
+          left: -($custom-control-gutter + $size);
+          width: $size;
+          height: $size;
+      }
+      // Foreground (icon)
+      &::after {
+          top: ($font-size * $line-height-base - $size) / 2;
+          left: -($custom-control-gutter + $size);
+          width: $size;
+          height: $size;
+      }
+  }
+}

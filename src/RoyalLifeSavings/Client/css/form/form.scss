@@ -1,0 +1,93 @@
+/// <reference path="../../index.scss" />
+///////////////////////////////////////////////////////////////////////////////////
+
+.form-subscribe {
+  width: 100%;
+  padding: 0 1rem;
+
+  @include media-breakpoint-up(md) {
+    width: 526px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  border-radius: 1.35rem;
+  font-family: $font-family-frutiger;
+  letter-spacing: 0.8px;
+  border-color: #8AD8F6;
+
+  &:focus {
+    border-color: #8AD8F6;
+    box-shadow: 0 0 0 0.25rem rgb(0 74 117 / 25%);
+  }
+
+  &:placeholder-shown + .input-close {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.form-sign-in {
+  font-size: 0.9rem !important;
+}
+
+.alert {
+  background-color: $danger;
+  border-radius: 3.35rem;
+  display: flex;
+  padding: 10px 15px;
+  margin-bottom: 0.5rem;
+}
+
+.input-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(50%);
+
+  margin-top: 2px;
+  margin-right: 10px;
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  transition: all .1s;
+}
+
+
+.order-form {
+  max-width: 416px;
+  margin: 0 auto;
+  background: $white;
+  box-shadow: 0px 14px 36px -18px rgba(0, 0, 0, 0.3), 0px 17px 60px -12px rgba(50, 50, 93, 0.16);
+  border-radius: 10px;
+
+  .order-header {
+    background: $theme-primary;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 0.8rem 0;
+  }
+
+  .order-body {
+    padding: 1.8rem 1.8rem 0;
+  }
+
+  .total-container {
+    background: $white;
+    padding: 0 1rem 1.8rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    .order-total {
+      background: $white;
+      border-top: 1px solid rgba(0, 74, 117, 0.27);
+      border-bottom: 1px solid rgba(0, 74, 117, 0.27);
+    }
+  }
+}

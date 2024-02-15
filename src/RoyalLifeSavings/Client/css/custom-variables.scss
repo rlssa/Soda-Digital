@@ -1,0 +1,35 @@
+﻿/// <reference path="../index.scss" />
+///////////////////////////////////////////////////////////////////////////////////
+// icons
+$icon-size-unit: 8px;
+$icon-size-xs: $icon-size-unit * 2;
+$icon-size: $icon-size-unit * 3;
+$icon-size-sm: $icon-size-unit * 2.5;
+$icon-size-2sm: $icon-size-unit * 3;
+$icon-size-3sm: $icon-size-unit * 3.5;
+$icon-size-md: $icon-size-unit * 4;
+$icon-size-lg: $icon-size-unit * 5;
+$icon-size-xl: $icon-size-unit * 7;
+$icon-size-xxl: $icon-size-unit * 8;
+$icon-size-xxxl: $icon-size-unit * 10;
+$icon-size-xxxxl: $icon-size-unit * 12;
+
+// container
+$base-container: map-get($container-max-widths, "xxxl");
+$base-container-sm: map-get($container-max-widths, "xxl");
+$base-container-xs: map-get($container-max-widths, "xl");
+$dashboard-container: map-get($container-max-widths, "xxxxl");
+$form-container: map-get($container-max-widths, "xxl");
+$auth-container: 500px;
+
+// promo-alert
+$promo-alert-bg: $dark;
+$promo-alert-height-mobile: 2.75rem;
+
+// masthead
+$masthead-height-mobile: 3.75rem;
+$masthead-height: 4.5rem;
+
+// drawer
+$drawer-width: 40rem;
+$drawer-shadow: -0.5rem 0 1rem rgba($gray-900, .15);

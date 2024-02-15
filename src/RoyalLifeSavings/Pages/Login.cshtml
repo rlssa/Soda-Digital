@@ -1,0 +1,60 @@
+@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Login - Royal Life Saving eBook Store";
+    Layout = "_LayoutLogin";
+}
+
+<div class="login">
+    <div class="space-separator--lg"></div>
+    <div class="space-separator--lg"></div>
+    <div class="page-container-sm">
+        <div class="login-container">
+            <div>
+                <div class="space-separator--lg"></div>
+                <div class="space-separator--lg"></div>
+                <div class="space-separator--md"></div>
+            </div>
+            <div class="form">
+                <div class="space-separator--lg"></div>
+                <h3 class="login-title text-center text-muted-dark px-3 px-md-0 text-uppercase">
+                    Login to your Account
+                </h3>
+                <div class="px-3">
+                    <p class="text-center small text-md-normal text-muted-light pt-2 px-md-5 leading-1 line-md-1">If you've already made a purchase, enter your details to access your account/eBook.</p>
+                    <form method="post">
+                        <div class="form-group">
+                            <div>
+                                <div class="space-separator--md"></div>
+                            </div>
+                            @if (!Model.ModelState.IsValid)
+                            {
+                                <div class="alert">
+                                    <div class="icon icon-2sm me-1 text-primary-light pt-md-1">
+                                        <icon icon="Warning"></icon>
+                                    </div>
+                                    <p class="text-white leading-1 m-0">Email doesn’t exist!</p>
+                                </div>
+                            }
+                            <label>Email</label>
+                            <div class="position-relative">
+                                <input type="email" asp-for="Email" class="form-control form-sign-in mt-1" placeholder=" ">
+                                <button class="input-close" type="reset">
+                                    <div class="icon icon-sm">
+                                        <icon icon="X"></icon>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-submit w-100 mt-1">Sign In</button>
+                    </form>
+                </div>
+                <div class="space-separator--lg"></div>
+            </div>
+        </div>
+    </div>
+    <div class="wave-spacer">
+        <img class="login" src="/images/bg-login.png" alt="">
+    </div>
+</div>

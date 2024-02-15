@@ -1,0 +1,101 @@
+/// <reference path="../../index.scss" />
+///////////////////////////////////////////////////////////////////////////////////
+.space-separator {
+  padding-top: 1rem;
+
+  @include media-breakpoint-up(sm) {
+      padding-top: 1.5rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+      padding-top: 2rem;
+  }
+}
+
+
+.space-separator--md {
+  padding-top: 1.5rem;
+
+  @include media-breakpoint-up(sm) {
+      padding-top: 2rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+      padding-top: 2.75rem;
+  }
+}
+
+
+.space-separator--lg {
+  padding-top: 2rem;
+
+  @include media-breakpoint-up(sm) {
+      padding-top: 3rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+      padding-top: 4rem;
+  }
+}
+
+.space-separator--xl {
+  padding-top: 2.5rem;
+
+  @include media-breakpoint-up(sm) {
+      padding-top: 3.8rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+      padding-top: 5rem;
+  }
+}
+
+// space between header and body
+.space-body-top {
+  padding-top: 1.5rem;
+
+  @include media-breakpoint-up(md) {
+      padding-top: 2rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+      padding-top: 3rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+      padding-top: 4rem;
+  }
+}
+// space between header and body
+.space-body-top-sm {
+  padding-top: 1.5rem;
+
+  @include media-breakpoint-up(md) {
+      padding-top: 2rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+      padding-top: 3rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+      padding-top: 4rem;
+  }
+}
+// space between each section
+.space-section {
+  padding-top: 1.5rem;
+
+  @include media-breakpoint-up(md) {
+      padding-top: 2rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+      padding-top: 3rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+      padding-top: 4rem;
+  }
+}
+

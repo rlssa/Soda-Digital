@@ -1,0 +1,128 @@
+/// <reference path="./index.scss" />
+///////////////////////////////////////////////////////////////////////////////////
+
+/*! purgecss start ignore */
+// icons
+@mixin icon-variant ($size, $stroke-width: 1.5px) {
+  width: $size;
+  height: $size;
+  stroke-width: $stroke-width;
+}
+
+.icon {
+  flex-shrink: 0;
+  @include icon-variant($icon-size);
+
+  svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      stroke-width: 1.5px;
+      overflow: visible;
+  }
+}
+
+.icon-128 {
+  @include icon-variant(128px);
+}
+
+.icon-24 {
+  @include icon-variant(24px);
+}
+.icon-initial {
+  @include icon-variant(initial);
+}
+.icon-xs {
+  @include icon-variant($icon-size-xs);
+}
+
+.icon-sm {
+  @include icon-variant($icon-size-sm);
+}
+
+.icon-2sm {
+  @include icon-variant($icon-size-2sm);
+}
+
+.icon-3sm {
+  @include icon-variant($icon-size-3sm);
+}
+
+.icon-md {
+  @include icon-variant($icon-size-md);
+}
+
+.icon-lg {
+  @include icon-variant($icon-size-lg);
+}
+
+.icon-xl {
+  @include icon-variant($icon-size-xl);
+}
+
+.icon-xxl {
+  @include icon-variant($icon-size-xxl);
+}
+
+.icon-xxxl {
+  @include icon-variant($icon-size-xxxl);
+}
+
+.icon-xxxxl {
+  @include icon-variant($icon-size-xxxxl);
+}
+
+.icon-big {
+  @include icon-variant($icon-size-unit * 16);
+}
+
+.icon-stroke-1 {
+  svg {
+      stroke-width: 1px !important;
+  }
+}
+
+.icon-stroke-1-5 {
+  svg {
+      stroke-width: 1.5px !important;
+  }
+}
+
+.icon-stroke-1-28 {
+  svg {
+      stroke-width: 1.28px !important;
+  }
+}
+
+.icon-stroke-2 {
+  svg {
+      stroke-width: 2px !important;
+  }
+}
+.icon-stroke-3 {
+  svg {
+      stroke-width: 3px !important;
+  }
+}
+
+
+@each $color, $value in $theme-colors {
+  .icon-fill-#{$color} {
+      fill: $value;
+  }
+
+  .icon-stroke-#{$color} {
+      stroke: $value;
+  }
+}
+
+
+/*! purgecss end ignore */
+
+.icon-me-1 {
+  margin-right: 8px;
+}
+
+.icon-me-2 {
+  margin-right: 14px;
+}

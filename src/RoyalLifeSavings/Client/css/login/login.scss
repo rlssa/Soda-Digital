@@ -1,0 +1,101 @@
+/// <reference path="./index.scss" />
+///////////////////////////////////////////////////////////////////////////////////
+///
+
+$color-title: #344054;
+
+.login {
+  position: relative;
+  // overflow: hidden;
+  height: calc(100vh - 80px);
+
+
+  .login-container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 10rem;
+  }
+
+  &.success{
+    padding-top: 30px;
+    @include media-breakpoint-up(md) {
+      padding-top: 0;
+    }
+  }
+}
+
+.form {
+  background: $white;
+  border-radius: 10px;
+  z-index: 1;
+  padding: 0 1rem;
+
+  box-shadow: 0px 18px 36px -18px rgba(0, 0, 0, 0.2),
+    0px 30px 60px -12px rgba(0, 74, 117, 0.47);
+  @include media-breakpoint-up(md) {
+    padding: 0 2rem;
+  }
+
+  &.large {
+    @include media-breakpoint-up(md) {
+      padding: 0 5rem;
+    }
+  }
+}
+
+
+.icon-success {
+  width: 5rem;
+
+  @include media-breakpoint-up(md) {
+    width: 12rem;
+  }
+}
+
+.login-title {
+  font-size: 1.94rem;
+}
+
+.login-desc {
+  color: $gray-600;
+}
+
+.text-width {
+  max-width: 30rem;
+  // @include media-breakpoint-up(md) {
+  //   width: 30rem;
+  // }
+}
+
+.success-subtitle {
+  padding-top: 1rem;
+  color: $theme-primary-light;
+  font-weight: $font-weight-medium;
+  font-size: 17px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 20px;
+  }
+}
+
+
+.success-desc{
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 19px;
+    line-height: 28px;
+  }
+  a {
+    color: $theme-primary;
+    text-decoration: underline;
+    &:hover{
+     color: $theme-tertiary-gray;
+    }
+  }
+}

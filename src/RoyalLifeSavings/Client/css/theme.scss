@@ -1,0 +1,243 @@
+﻿/// <reference path="../index.scss" />
+///////////////////////////////////////////////////////////////////////////////////
+/// COLOUR SYSTEM
+///////////////////////////////////////////////////////////////////////////////////
+
+// PRIMARY
+$theme-primary-muted: #57585A;
+$theme-primary: #004A75; 
+$theme-primary-light: #00AEEF;
+$theme-primary-pale: #9EDCF7;
+$theme-primary-pastel: #E6F8FE;
+$theme-primary-dark: #004C73;
+$theme-primary-darker: #344054;
+
+// SECONDARY
+
+$theme-secondary-dark: #69B750;
+$theme-secondary: #F89C1C;
+$theme-secondary-light: #C39A73;
+
+$theme-tertiary: #C5C2BB;
+$theme-tertiary-gray: #807B78;
+
+// MONOCHROME
+$gray-100: #fcfcff;
+$gray-200: #f7f8ff;
+$gray-300: #F6F7F9;
+$gray-400: #d8dff6;
+$gray-500: #abb4d6;
+$gray-600: #667085;
+$gray-700: #3e496d;
+$gray-800: #1e294a;
+$gray-900: #1E2022;
+
+// SEMANTIC
+
+$success: #69B750;
+$info: #7424db;
+$warning: #F89C1C;
+$danger: #DA3030;
+
+// SEMANTIC MONO
+
+$light: $gray-300;
+$text-muted: $theme-primary-dark; // typically against light
+$text-muted-light: $gray-600; // typically against dark
+$text-muted-dark: $theme-primary-darker;
+$dark: $gray-900;
+
+// SYSTEM
+
+$black: #000;
+$white: #fff;
+
+// MAPPED
+
+$body-color: $theme-primary-muted; // default body text
+$body-bg: $white;
+$primary: $theme-primary;
+$box-shadow-color: $dark;
+$border-color: $gray-400;
+$input-border-color: $border-color;
+// $secondary: $theme-secondary;
+
+// Gutters
+$grid-gutter-width: 40px; // 2rem
+$form-check-input-gutter: 8px;
+
+// BREAKPOINTS
+$grid-breakpoints: ( xs: 0, xs-375: 375px, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1440px, xxxl: 1680px, xxxxl: 1920px, xxxxxl: 2340px, );
+
+// CONTAINERS
+$container-max-widths: ( xs: 320px, xs-375: 350px, sm: 540px, md: 720px, lg: 960px, xl: 1152px, xxl: 1425px, xxxl: 1584px, xxxxl: 1800px, );
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// ADDITIONAL
+//////////////////////////////////////////////////////////////////////////////////////////
+// SHADOWS AND OVERLAYS
+$box-shadow-double: 0px 0px 16px rgba($box-shadow-color, 0.08), 0px 3px 0px rgba(216, 223, 246, 0.36);
+$box-shadow-sm: 0px 4px 4px rgba($box-shadow-color, 0.05);
+$box-shadow: 0px 14px 36px -18px rgba(0, 0, 0, 0.3), 0px 17px 60px -12px rgba(50, 50, 93, 0.16);
+$box-shadow-lg: 0 8px 18px rgba($box-shadow-color, 0.1);
+$box-shadow-xl: 0 12px 32px rgba($box-shadow-color, 0.15);
+$box-shadow-xxl: 0px 8px 32px rgba($box-shadow-color, 0.16), 0px 3px 12px rgba(216, 223, 246, 0.44);
+$modal-box-shadow: 0 12px 32px rgba($box-shadow-color, 0.75);
+$card-box-shadow: $box-shadow;
+
+// BORDERS
+
+$border-width: 1px;
+$input-btn-border-width: $border-width;
+
+// BORDER RADIUS
+$border-radius: 0.45rem;
+$border-radius-lg: 0.75rem;
+$border-radius-sm: 0.35rem;
+$card-border-radius: 0.35rem;
+
+
+// BREADCRUMBS
+$breadcrumb-divider-color: $black;
+$breadcrumb-active-color: $black;
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// FONTS
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+$font-family-frutiger: "Frutiger", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-serif: unset; // TBD... need to make a utility class bor both to override
+$font-family-base: $font-family-frutiger; // map default
+
+// Add Font Family
+$font-family-vag-rounded: "Vag", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+
+
+$font-weight-lighter: 400;
+$font-weight-light: 400;
+$font-weight-normal: 400;
+$font-weight-medium: 500; // custom addition
+$font-weight-bold: 700;
+$font-weight-bolder: 700;
+$font-size-base: 1rem;
+$font-size-sm: $font-size-base - 0.125rem;
+$font-size-xs: $font-size-sm - 0.125rem;
+$font-size-md: $font-size-base + 0.125rem;
+$font-size-lg: $font-size-md + 0.125rem;
+$body-color: $theme-primary-muted;
+$headings-font-family: $font-family-vag-rounded;
+$headings-color: $black;
+$headings-font-weight: $font-weight-bold;
+$line-height-lg: 1.9;
+
+// z-index
+$zindex-dropdown: 1000;
+$zindex-sticky: 1020;
+$zindex-fixed: 1030;
+$zindex-nav: 1035;
+$zindex-modal-backdrop: 1040;
+$zindex-modal: 1050;
+$zindex-popover: 1060;
+$zindex-tooltip: 1070;
+$zindex-overlay: 2000;
+$zindex-drawer: 3000;
+$zindex-toast: 4000;
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// DEV - Move to this to another file in the import process - make below theme-variables and the above theme-setup
+//////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////
+//===  OVERRIDED BOOTSTRAP VARIABLES
+//===  ---------------------------------------------------------------------------
+//===  1. Copy the variables in variables.scss file
+//===  2. Remove !default flag
+///////////////////////////////////////////////////////////////////////////////////
+
+// FORM
+$custom-control-indicator-size: 1.2rem;
+
+// ADDITIONAL TEXT
+$code-color: $info;
+
+// // tooltips
+$tooltip-bg: $dark;
+$tooltip-arrow-color: $dark;
+
+$muted-light: $text-muted-light;
+$muted-dark: $text-muted-dark;
+
+// ADDITIONAL COLOUR SYSTEM
+// $theme-colors: ( "primary-darker": $theme-primary-darker, "primary-dark": $theme-primary-dark, "primary-muted": $theme-primary-muted, "primary-light": $theme-primary-light, "primary-pale": $theme-primary-pale, "secondary-dark": $theme-secondary-dark, "secondary-muted": $theme-secondary-muted, "secondary-light": $theme-secondary-light, "muted-light": $muted-light);
+$theme-colors: ( "muted-light": $muted-light, "muted-dark": $muted-dark, "primary-muted": $theme-primary-muted, "primary-light": $theme-primary-light, "primary-pale": $theme-primary-pale, "secondary-dark": $theme-secondary-dark, "secondary-light": $theme-secondary-light, "primary-pastel": $theme-primary-pastel, "primary-dark": $theme-primary-dark, "tertiary-gray": $theme-tertiary-gray );
+
+$primary: $theme-primary;
+$secondary: $theme-primary-light;
+
+// active color
+$component-active-bg: $secondary;
+
+// input & buttons
+$input-btn-padding-y: 0.65rem;
+$input-btn-padding-x: 0.75rem;
+$btn-padding-x: 1.5rem;
+$input-btn-padding-y-sm: 0.4rem;
+$input-btn-padding-x-sm: 0.7rem;
+$input-btn-font-size-sm: $font-size-sm;
+
+$input-placeholder-color: $theme-tertiary;
+
+// headings
+$display1-size: 8rem;
+$display2-size: 7.5rem;
+$display3-size: 6.5rem;
+$display4-size: 5.5rem;
+$h1-font-size: 3.125rem;
+$h2-font-size: 2.813rem;
+$h3-font-size: 2.5rem;
+$h4-font-size: 1.5625rem;
+$h5-font-size: 1.438rem;
+$h6-font-size: 1.375rem;
+
+// dropdown
+$dropdown-spacer: 0;
+$dropdown-border-width: 0;
+$dropdown-box-shadow: 0px 4px 8px rgba($box-shadow-color, 0.1);
+$dropdown-item-padding-y: 0.75rem;
+$dropdown-min-width: 14rem;
+$nav-divider-color: $gray-400;
+// card
+$card-cap-bg: transparent;
+$card-border-width: 1px;
+$card-border-color: $border-color;
+
+$card-spacer-y: 0.75rem !default;
+$card-spacer-x: 1.25rem !default;
+//table
+$table-cell-padding: 1rem 0.85rem;
+$table-accent-bg: none;
+$table-striped-order: even;
+$table-hover-bg: rgba($secondary, 0.075);
+// alert
+$alert-padding-x: 1rem;
+$alert-margin-bottom: 0;
+// yiq
+$yiq-contrasted-threshold: 200;
+
+// badge
+$badge-font-size: 80%;
+$badge-border-radius: 0.25rem;
+$badge-font-weight: $font-weight-medium;
+// modal
+$modal-content-border-radius: $border-radius;
+$modal-backdrop-bg: $gray-900;
+$modal-backdrop-opacity: 0.75;
+// link
+$link-color: #FFFFFF;
+// tooltip
+$tooltip-opacity: 1;
+$tooltip-bg: $dark;
+$tooltip-border-radius: $border-radius-sm;
+$tooltip-max-width: 500px;

@@ -1,0 +1,161 @@
+@page "/buy-or-rent"
+@using RoyalLifeSavings.Models
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model BuyRentModel
+@{
+    ViewData["Title"] = "Buy or Rent Multiple Copies";
+    Layout = "_Layout";
+}
+<div class="buy-rent">
+    <div class="space-separator--lg"></div>
+    <div class="space-separator--lg"></div>
+    <div class="space-separator--md"></div>
+
+    <div class="page-container">
+        <div class="buy-rent-container">
+            <div class="space-separator"></div>
+            <h1 class="title">Buying or Renting Multiple Copies</h1>
+
+
+            <form method="post">
+
+
+                <div class="renting-form mt-4">
+
+                    @if (!ModelState.IsValid)
+                    {
+                        <div class="alert alert-danger mb-4 text-white" role="alert">
+                            Please fill in the mandatory fields to submit the form
+                        </div>
+                    }
+
+                    <p>Please complete this form if you are interested in either:</p>
+
+                    <ol class="px-4 px-md-5 ms-1">
+                        <li><span class="fw-bold">Buying</span> more than one copy of an eBook, e.g. a classroom set, OR</li>
+                        <li><span class="fw-bold">Renting</span> an eBook or eBooks for a set period of time, e.g. 24 hours, 3 days, 7 days etc.</li>
+                    </ol>
+
+                    <p class="mb-4">If you wish to purchase a single copy of the book, <a href="/">click here to buy now online</a>.</p>
+
+                    <p class="mb-4 pb-3">Once the form is submitted, you will be contacted to confirm your enquiry and/or to facilitate the transaction.</p>
+
+                    <div class="options">
+                        <p class="label">
+                            Select an option:
+                        </p>
+                        <div class="form-check">
+
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" checked value="@((int)BuyOrRentOptions.RentSingle)" asp-for="Model.BuyOrRentOptions">
+                                I’m looking to rent a single copy of an eBook
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" value="@((int)BuyOrRentOptions.RentMultiple)" asp-for="Model.BuyOrRentOptions">
+                                I’m looking to rent multiple copies of an eBook
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" value="@((int)BuyOrRentOptions.BuyMultiple)" asp-for="Model.BuyOrRentOptions">
+                                I’m looking to buy multiple copies of an eBook
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <p>
+                            Which eBook(s) are you interested in renting or buying multiple copies of? (Select all that apply)
+                        </p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" asp-for="Model.LifeguardingManual">
+                            <label class="form-check-label" asp-for="Model.LifeguardingManual">
+                                Lifeguarding Manual
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" asp-for="Model.SwimmingAndWaterSafetyManual">
+                            <label class="form-check-label" asp-for="Model.SwimmingAndWaterSafetyManual">
+                                Swimming and Water Safety Manual
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" asp-for="Model.FirstAidManual">
+                            <label class="form-check-label" asp-for="Model.FirstAidManual">
+                                First Aid Manual
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <label class="form-label mb-3">Please share any other information that will help us to respond to your specific enquiry.</label>
+                        <textarea class="form-control" rows="7" placeholder="Type here...." asp-for="Model.OtherInformation"></textarea>
+                    </div>
+
+                    <p class="contact-details-text">
+                        Please provide your contact details so we can follow up on your enquiry.
+                    </p>
+
+                    <div class="mb-4">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-control" asp-for="Model.FirstName">
+                        <span asp-validation-for="Model.FirstName" class="text-danger text-xs"></span>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Last Name</label>
+
+                        @* Add "is-invalid" class in input for validation error *@
+
+                        <input type="text" class="form-control" asp-for="Model.LastName">
+                        <span asp-validation-for="Model.LastName" class="text-danger text-xs"></span>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Email</label>
+
+                        @* Add "is-invalid" class in input for validation error *@
+
+                        <input type="email" class="form-control" asp-for="Model.Email">
+                        <span asp-validation-for="Model.Email" class="text-danger text-xs"></span>
+                    </div>
+                    <div class="mb-4">
+                        <label for="" class="form-label">State or Territory</label>
+                        <select class="form-select" aria-label="Default select example" asp-for="Model.State">
+                            <option disabled>Please select</option>
+                            <option>New South Wales (NSW)</option>
+                            <option>Queensland (QLD)</option>
+                            <option>South Australia (SA)</option>
+                            <option>Tasmania (TAS)</option>
+                            <option>Victoria (VIC)</option>
+                            <option>Western Australia (WA)</option>
+                            <option>Australian Capital Territory (ACT)</option>
+                            <option>Northern Territory (NT)</option>
+                            <option>International</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" asp-for="Model.PhoneNumber">
+                        <span asp-validation-for="Model.PhoneNumber" pattern="[0-9]" class="text-danger text-xs"></span>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label mb-3">School or organisation that you are enquiring on behalf of: (Optional)</label>
+                        <input type="text" class="form-control" asp-for="Model.SchoolOrg">
+                        <span asp-validation-for="Model.SchoolOrg" class="text-danger text-xs"></span>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-5">
+                        <button class="btn btn-submit" type="submit">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="wave-spacer">
+        <img class="buy-rent" src="/images/bg-buyrent.png" alt="">
+    </div>
+</div>

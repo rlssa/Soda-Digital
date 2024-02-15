@@ -1,0 +1,23 @@
+/// <reference path="../../index.scss" />
+///////////////////////////////////////////////////////////////////////////////////
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Frutiger";
+  src: url("frutiger/Frutiger-55-Roman.woff") format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Frutiger";
+  src: url("frutiger/Frutiger-65-Bold.woff") format("woff");
+  font-weight: 700;
+}
+
+*, *:before, *:after {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+///////////////////////////////////////////////////////////////////////////////////

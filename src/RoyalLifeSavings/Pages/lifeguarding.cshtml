@@ -1,0 +1,115 @@
+@page
+@model LifeguardingModel
+@{
+    ViewData["Title"] = "Lifeguarding - Royal Life Saving eBook Store";
+    Layout = "_Layout";
+}
+
+<div class="hero">
+    <div class="space-separator--lg"></div>
+    <div class="space-separator--lg"></div>
+    <div class="space-separator--md"></div>
+    <div class="space-separator"></div>
+    <div class="page-container-sm">
+        <div class="hero-container">
+            <h1 class="text-white">Lifeguarding</h1>
+            <h5 class="hero-subtitle ebook-subtitle pr-5">The Royal Life Saving Lifeguarding Manual covers the knowledge, principles, techniques and practices that go into effective and safe pool lifeguarding.</h5>
+            <div class="ebook-details">
+              <img class="ebook-image" src="/images/life-guarding-book.png" alt="">
+              <div class="ebook-desc">
+                <p class="text">The Manual is based on a long history of research into best practice and is written in collaboration with a wide range of industry experts. It is written for industry and has been the key industry reference point since 1992. It is structured into easily digestible learning themes and forms an essential component of the nationally recognised Pool Lifeguard course (the Skill Set) and is used by lifeguards, aquatic facilities and Registered Training Organisations across Australia.</p>
+
+                <div class="buy-ebook d-xl-none">
+                  <p class="title">
+                    Buy eBook
+                  </p>
+                  <form method="post">
+                   
+                    <p class="includes">Includes <span>GST</span></p>
+                    <p class="price">$31.00 <span>AUD</span></p>
+                
+                    <button type="submit" class="btn btn-submit btn-buy w-100 mt-1"> BUY NOW</button>
+                    <a class="mt-3 btn btn-buy-rent w-100" href="/buy-or-rent">Buy or Rent Multiple Copies</a>
+                  </form>
+                </div>
+              </div>
+              <div class="buy-ebook d-none d-xl-flex">
+                <p class="title">
+                  Buy eBook
+                </p>
+                <form method="post">
+                 
+                  <p class="includes">Includes <span>GST</span></p>
+                  <p class="price">$31.00 <span>AUD</span></p>
+              
+                  <button type="submit" class="btn btn-submit btn-buy w-100 mt-1"> BUY NOW</button>
+                  <a class="mt-3 btn btn-buy-rent w-100" href="/buy-or-rent">Buy or Rent Multiple Copies</a>
+                </form>
+              </div>
+            </div>
+         </div>
+    </div>
+    <div class="wave-spacer">
+        <img src="/images/bg-ebook.png" alt="Lifeguarding" class="ebook">
+    </div>
+</div>
+
+<div class="page-container-sm relative">
+    <div class="row table-contents">
+        <div class="col-12 col-md-6 position-relative ps-4">
+            <div class="position-md-center">
+                <h2 class="text-primary pt-2">Table of Contents</h2>
+
+                <div class="d-flex pt-4">
+                    <div class="icon icon-me-2 icon-3sm"><icon icon="Book"></icon></div>
+                    <p class="text-uppercase fw-bold"><span class="text-primary">Module One:</span> Introduction to Lifeguarding</p>
+                </div>
+                <div class="d-flex pt-2">
+                    <div class="icon icon-me-2 icon-3sm"><icon icon="Book"></icon></div>
+                    <p class="text-uppercase fw-bold"><span class="text-primary">Module Two:</span> Risk Management</p>
+                </div>
+                <div class="d-flex pt-2">
+                    <div class="icon icon-me-2 icon-3sm"><icon icon="Book"></icon></div>
+                    <p class="text-uppercase fw-bold"><span class="text-primary">Module Three:</span> Aquatic Supervision</p>
+                </div>
+                <div class="d-flex pt-2">
+                    <div class="icon icon-me-2 icon-3sm"><icon icon="Book"></icon></div>
+                    <p class="text-uppercase fw-bold"><span class="text-primary">Module Four:</span> Communication</p>
+                </div>
+                <div class="d-flex pt-2">
+                    <div class="icon icon-me-2 icon-3sm"><icon icon="Book"></icon></div>
+                    <p class="text-uppercase fw-bold"><span class="text-primary">Module Five:</span> Supervision of Specific Aquatic Environments</p>
+                </div>
+                <div class="d-flex pt-2">
+                    <div class="icon icon-me-2 icon-3sm"><icon icon="Book"></icon></div>
+                    <p class="text-uppercase fw-bold"><span class="text-primary">Module Six:</span> Oxygen Use and After Care</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 pe-xl-5">
+            <div class="row">
+                <div class="col-6 pe-2">
+                    <img class="shadow rounded-3 w-full" src="/images/book1.JPG" alt="">
+                    <div class="space-separator"></div>
+                    <img class="shadow rounded-3 w-full" src="/images/book3.JPG" alt="">
+                </div>
+                <div class="col-6 ps-2">
+                    <div class="space-separator"></div>
+                    <div class="space-separator"></div>
+                    <img class="shadow rounded-3 w-full" src="/images/book2.JPG" alt="">
+                    <div class="space-separator"></div>
+                    <img class="shadow rounded-3 w-full" src="/images/book4.JPG" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ebook ebook-features-container">
+  <div class="page-container-sm" id="swimmingandlifesaving">
+      <div class="space-separator--md"></div>
+      <div class="space-separator--md"></div>
+        <partial name="_EbookFeatures" />
+      <div class="space-separator--md"></div>
+      <div class="space-separator--md"></div>
+  </div>
+</div>

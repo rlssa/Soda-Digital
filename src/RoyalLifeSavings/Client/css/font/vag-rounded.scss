@@ -1,0 +1,29 @@
+/// <reference path="../../index.scss" />
+///////////////////////////////////////////////////////////////////////////////////
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Vag";
+    src: url("VAGRounded/VAGROUNDEDNEXT.woff") format("woff");
+    font-weight: 400;
+}
+
+@font-face {
+  font-family: "Vag";
+  src: url("VAGRounded/VAGROUNDEDNEXTMEDIUM.woff") format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Vag";
+  src: url("VAGRounded/VAGROUNDEDNEXTBOLD.woff") format("woff");
+  font-weight: 700;
+}
+
+*, *:before, *:after {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+///////////////////////////////////////////////////////////////////////////////////

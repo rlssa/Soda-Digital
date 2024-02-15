@@ -1,0 +1,47 @@
+@page "/Confirmation"
+@model ConfirmationModel
+@{
+    ViewData["Title"] = "Thank you";
+    Layout = "_LayoutReverse";
+}
+
+<div class="space-separator--lg"></div>
+<div class="space-separator--lg"></div>
+<div class="space-separator--md"></div>
+
+<div class="page-container">
+
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="icon icon-128">
+            <icon icon="Confirm"></icon>
+        </div>
+    </div>
+    <div class="space-separator"></div>
+    <h1 class="text-primary text-center">Thank you for placing your order!</h1>
+    <h6 class="hero-subtitle-2 text-center">An email will be sent shortly that will provide access to your purchase</h6>
+
+    <div class="space-separator--lg"></div>
+    <div class="order-form">
+        <div class="order-header">
+            <h4 class="text-white text-center m-0">What you Ordered</h4>
+        </div>
+        <div class="order-body">
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="leading-1">1 x @Model.Ebook?.Name</p>
+                <p class="leading-1">$@Model.Ebook?.Price.ToString("N0") </p>
+            </div>
+        </div>
+        <div class="total-container">
+          <div class="order-total">
+              <div class="d-flex justify-content-between align-items-center px-2">
+                  <p class="leading-1 text-uppercase medium m-0">Total</p>
+                  <p class="leading-1 m-0">$@Model.Ebook?.Price.ToString("N0")</p>
+              </div>
+          </div>
+        </div>
+    </div>
+    <div class="space-separator--lg"></div>
+     <p class="text-center small text-md-normal px-large leading-1 text-black m-0">If you do not receive your confirmation email, please check your SPAM / junk email folder. </p>
+      <p class="text-center small text-md-normal px-large leading-1 text-black">If you continue to have issues accessing your purchase please email <a class="text-primary" href = "mailto:helpdesk@rlssa.org.au">helpdesk@rlssa.org.au</a>
+    <div class="space-separator--lg"></div>
+</div>

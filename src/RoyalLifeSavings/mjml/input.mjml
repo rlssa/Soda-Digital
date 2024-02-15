@@ -1,0 +1,86 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      .header {
+    		border-top-left-radius: 10px !important;
+      	border-top-right-radius: 10px !important;
+      }
+      
+       .bott-radius {
+    		border-bottom-left-radius: 10px;
+      	border-bottom-right-radius: 10px;
+      }
+      
+      .body {
+    		box-shadow: 0px 14px 36px -18px rgba(0, 0, 0, 0.1), 0px 17px 60px 				-12px rgba(50, 50, 93, 0.1);
+      	border-bottom-left-radius: 10px;
+      	border-bottom-right-radius: 10px;
+      }
+      
+      .padding {
+     		padding: 0;
+      }
+      
+      .header-text {
+      		padding: 20px 10px 0 !important;
+      }
+      
+      .sub-text {
+   			padding: 20px 10px 0 !important;
+      }
+      
+      .footer {
+      padding: 0 10px !important;
+      }	
+      
+      .desc {
+      padding: 15px 10px 25px !important;
+      }
+      
+      @media (min-width:480px) { 
+        .header-text {
+      		padding: 50px 45px 0 !important;
+        }
+      
+      	.sub-text {
+          padding: 15px 115px 25px !important;
+        }
+      
+      	.desc {
+          padding: 15px 115px 25px !important;
+        }
+      
+      	.footer {
+      		padding: 0 100px !important;
+      	}	
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#E6F8FE">
+    <mj-section padding-top="20px" padding-bottom="0">
+      <mj-column>
+
+        <mj-image css-class="header" container-background-color="#004A75" padding="30px 20px" width="160px" src="http://cdn.mcauto-images-production.sendgrid.net/e77083f1e420cdf5/f6d8afda-31ff-4ed9-baa3-808dff87236b/280x60.png"></mj-image>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#FFFFFF" css-class="body">
+      
+      <mj-column>
+				 <mj-text css-class="header-text" font-size="28px" font-weight="bold" font-family="arial" align="center" color="#004A75" line-height="34px">Access your Royal Life Saving eBook(s)</mj-text>
+        
+        	<mj-text css-class="sub-text" font-size="16px" font-weight="400" font-family="arial" align="center" color="#00AEEF" line-height="24px">To view or download your eBook purchase(s), 
+please login below</mj-text>
+        
+        <mj-button href="/Login" background-color="#004A75" border-radius="100px" width="160px" height="48px">Login
+        </mj-button>
+        <mj-text css-class="desc" font-size="14px" font-weight="400" font-family="arial" align="center" color="#57585A"  line-height="24px">If you are having trouble accessing your eBook(s), please email us at
+<a href="mailto:helpdesk@rlssa.org.au" style="color: #57585A;">helpdesk@rlssa.org.au</a> and we'll be happy to help.</mj-text>
+        
+        <mj-divider padding="20px 0" border-width="1px" border-color="#C5C2BB">
+        </mj-divider>
+        
+               <mj-text css-class="footer" font-size="10px" font-weight="400" font-family="arial" align="center" color="#004A75" line-height="24px">&#169; 2022 Royal Life Saving Australia. All Rights Reserved</mj-text>
+     	</mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
