@@ -69,7 +69,7 @@ jobs:
   devdeploy:
     name: Dev Deploy
     needs: dockerise
-    uses: ./.github/workflows/deploy.yaml
+    uses: ./.github/workflows/deploy.yaml@main
     with:
       containertag: ${{ github.run_number }}
       environment: 'Dev'
