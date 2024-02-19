@@ -1,0 +1,36 @@
+name : Deploy
+
+on:
+  workflow_call:
+    inputs:
+      containertag:
+        description: 'GitHub Container Tag'
+        required: true
+        type: string
+      environment:
+        description: 'Deployment Environment'
+        type: string
+        required: true         
+  workflow_dispatch:
+    inputs:
+      containertag:
+        description: 'GitHub Container Tag'
+        required: true
+        type: string
+      environment:
+        description: 'Deployment Environment'
+        type: environment
+        required: true
+
+
+
+jobs:
+  deployment:
+    concurrency: ${{ vars.AZURE_CONTAINER_REGISTRY }} ${{ vars.AZURE_CONTAINER_IMAGE_NAME }}
+    name: Deploy
+    uses: Soda-Digital/Deployment/.github/workflows/deploy.yml@main
+    with:
+      containertag: ${{ inputs.containertag }}
+      environment: ${{ inputs.environment}}
+      containerimagename: ${{ vars.AZURE_CONTAINER_IMAGE_NAME }}
+    secrets: inherit
