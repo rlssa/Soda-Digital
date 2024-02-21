@@ -22,7 +22,7 @@ COPY ["RoyalLifeSavings.csproj", "."]
 RUN dotnet restore "RoyalLifeSavings.csproj"
 COPY . .
 WORKDIR /src/RoyalLifeSavings
-RUN dotnet build "RoyalLifeSavings.csproj" -c Release -o /app/build
+RUN dotnet build "./RoyalLifeSavings.csproj" -c Release -o /app/build
 
 
 FROM build AS publish
