@@ -28,7 +28,7 @@ jobs:
   deployment:
     concurrency: ${{ vars.AZURE_CONTAINER_REGISTRY }} ${{ vars.AZURE_CONTAINER_IMAGE_NAME }}
     name: Deploy
-    uses: Soda-Digital/Deployment/.github/workflows/deploy.yml@main
+    uses: ./Soda-Digital/Deployment/.github/workflows/deploy.yml
     with:
       containertag: ${{ inputs.containertag }}
       environment: ${{ inputs.environment}}
