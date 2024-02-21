@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-WORKDIR /src/RoyalLifeSavings
+WORKDIR /src/RoyalLifeSavings/
 COPY ["RoyalLifeSavings.csproj", "."]
 RUN dotnet restore "RoyalLifeSavings.csproj"
 COPY . .
